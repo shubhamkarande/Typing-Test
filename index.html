@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⌨️ Advanced Typing Test</h1>
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="label">WPM:</span>
+                    <span id="wpm">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Accuracy:</span>
+                    <span id="accuracy">100%</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Time:</span>
+                    <span id="timer">60s</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Errors:</span>
+                    <span id="errors">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="time-select">Test Duration:</label>
+                <select id="time-select">
+                    <option value="30">30 seconds</option>
+                    <option value="60" selected>1 minute</option>
+                    <option value="120">2 minutes</option>
+                    <option value="300">5 minutes</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="code">Code</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <button id="theme-toggle">🌙 Dark Mode</button>
+                <button id="reset-btn">🔄 Reset</button>
+            </div>
+        </div>
+
+        <div class="typing-area">
+            <div id="text-display" class="text-display"></div>
+            <textarea 
+                id="input-area" 
+                class="input-area" 
+                placeholder="Click here and start typing..."
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+            ></textarea>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="progress-chars">0</span> / <span id="total-chars">0</span> characters
+            </div>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>🎉 Test Complete!</h2>
+            <div class="result-stats">
+                <div class="result-item">
+                    <div class="result-value" id="final-wpm">0</div>
+                    <div class="result-label">Words Per Minute</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value" id="final-accuracy">100%</div>
+                    <div class="result-label">Accuracy</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value" id="final-errors">0</div>
+                    <div class="result-label">Total Errors</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value" id="final-chars">0</div>
+                    <div class="result-label">Characters Typed</div>
+                </div>
+            </div>
+            <button id="restart-btn" class="restart-btn">Try Again</button>
+        </div>
+
+        <div class="features-info">
+            <h3>Features:</h3>
+            <ul>
+                <li>🎯 Real-time WPM and accuracy tracking</li>
+                <li>⏱️ Multiple test durations (30s, 1m, 2m, 5m)</li>
+                <li>📊 Difficulty levels with different text types</li>
+                <li>🌙 Dark/Light theme toggle</li>
+                <li>📈 Progress bar and character counter</li>
+                <li>🎨 Visual feedback for correct/incorrect typing</li>
+                <li>📱 Responsive design for all devices</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>""
